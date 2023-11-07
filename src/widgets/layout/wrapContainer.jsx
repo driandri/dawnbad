@@ -10,7 +10,7 @@ function WrapContainer({...props}) {
          <div className='w-full flex text-4xl xs:justify-center cursor-pointer xs:text-base hover:text-red-500' onClick={() => navigateTo('/')}>Home</div>
          <div className='flex justify-center w-full items-center flex-col gap-2'>{props.children}</div>
          <div>
-            <p>Dawn Bad Club, c.2023</p>
+            <p>Dawn Bad Club, c. 2023</p>
          </div>
       </div>
    )

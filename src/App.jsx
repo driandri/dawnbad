@@ -11,19 +11,6 @@ import Layout from "./widgets/layout/layout";
 function App() {
 
   return (
-    //     // <BrowserRouter>
-    //       <Routes>
-    //         <Route
-    //           path="/"
-    //           element={<Layout>
-    //             <Route index element={<Home />}  />
-    //             <Route path="gallery" element={<Gallery />} />
-    //           </Layout>
-    //           } />
-    //       </Routes>
-    //     // </BrowserRouter >
-    // 
-    //     // // <Router>
     <Routes>
       <Route path="/*" element={<Home />} />
       <Route path="/gallery" element={<Gallery />} />

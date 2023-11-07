@@ -31,7 +31,7 @@ export function Home({ showLoading, hideLoading }) {
   return (
     <main className="main-container flex justify-center">
       <div className="container-logo">
-        <p className="font-normal text-xs">Dawn Bad Club, c.2023</p>
+        <p className="font-normal text-xs">Dawn Bad Club, c. 2023</p>
         <div className="grid items-center justify-center text-center">
           <img className="grafity-logo" src="/img/logo_graffiti_22.svg" alt="Logo Grafity" />
           <ul className="nav-list md:hidden lg:hidden grid gap-3">
@@ -64,7 +64,7 @@ export function Home({ showLoading, hideLoading }) {
         <ul className="flex gap-5">
           {["/img/x_logo.svg", "/img/discord_logo.svg"].map((item, i) => {
             return <li key={i}>
-              <a className="cursor-pointer" href={i == [0] ? "https://twitter.com/gr3gor14n" : ""} target="_blank" rel="noopener noreferrer">
+              <a className="cursor-pointer" href={i == [0] ? "https://twitter.com/dawnbadclub" : "https://discord.com/invite/dawnbadclub"} target="_blank" rel="noopener noreferrer">
                 <img height={30} width={30} src={item} alt="" />
               </a>
             </li>
