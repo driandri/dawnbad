@@ -13,7 +13,7 @@
 
 .main-container {
    @apply h-screen w-screen;
-   background-image: url('./img/gifhomepage.gif');
+   background-image: url('/img/gifhomepage.gif');
    background-repeat: no-repeat;
    background-size: cover;
    background-color: black;
