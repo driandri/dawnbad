@@ -3,35 +3,56 @@
 @tailwind utilities;
 
 :root {
-   --primary-color: rgba(13, 43, 91, 1);
- }
-
-.sidebar {
-   @apply fixed h-screen z-20 left-0 top-0 rounded-none p-4 shadow-xl shadow-blue-gray-900/5;
-   background-color: var(--primary-color);
-   transition: width 0.3s ease;
+   --primary-color: rgb(255, 255, 255);
 }
 
-.wrapper {
-   @apply h-screen relative overflow-auto overflow-x-hidden w-full;
-   background-color: #f0f5fa;
+* {
+   color: white;
+   font-family: 'Rubik', sans-serif;
 }
 
-.body{
-   background-color: #e4ebf7;
+.main-container {
+   @apply h-screen w-screen;
+   background-image: url('./img/gifhomepage.gif');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: black;
+   background-position: center;
 }
 
-.burger-btn {
-   display: flex;
+.container-logo {
+   @apply flex items-center flex-col gap-20;
+   padding-top: 7%;
 }
 
-.burger-btn-mobile {
-   @apply hidden;
+.grafity-logo {
+   height: 370px;
+   width: 370px;
+}
+
+
+.bs-image-wrapper {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+   gap: 20px;
+}
+
+.bs-img {
+   height: 200px;
+   width: 200px;
+}
+
+.nav-item {
+   @apply uppercase font-normal text-2xl;
+   transition: all 0.4s ease;
+}
+
+.nav-item:hover {
+   color: red;
 }
 
 .footer-desk {
-   @apply absolute bottom-0 w-full flex mx-10 h-16;
-   border-top: 1px solid #c5c6c8;
+   @apply w-full;
 }
 
 .active-btn {
@@ -40,24 +61,43 @@
    color: #428df5;
 }
 
+.arrow-container {
+   @apply absolute top-[30%] flex w-[75vh] justify-between;
+}
+
+@media only screen and (max-width:640px) {
+   .arrow-container {
+      width: 10vh;
+   }
+}
+
 @media only screen and (min-width:0px) and (max-width:767px) {
+   .container-logo {
+      display: flex!important;
+   }
+
+   .bs-img {
+      width: 100px;
+      height: 100px;
+   }
+
+   .arrow-container {
+      width: 40vh;
+   }
+
+
    .footer-desk {
       display: none;
    }
 }
 
-@media only screen and (min-width: 768px) {
-   .footer-desk {
-      margin-left: 0px;
-   }
-}
+/* @media only screen and (min-width: 768px) {
+
+} */
 
 @media only screen and (min-width:0px) and (max-width:912px) {
-   .sidebar {
-     display: none;
+   .bs-img {
+      width: 180px;
+      height: 180px;
    }
-   .burger-btn {
-      display: none;
-   }
-  
- }
+}

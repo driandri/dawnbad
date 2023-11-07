@@ -1,13 +1,7 @@
 import {
   HomeIcon,
-  UserCircleIcon,
-  TableCellsIcon,
-  BellIcon,
-  ArrowRightOnRectangleIcon,
-  UserPlusIcon,
-  ChartBarIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables,  } from "@/pages/admin";
+import { Home  } from "@/pages";
 import Transaction from "./pages/admin/transaction";
 
 const icon = {
@@ -23,12 +17,6 @@ export const routes = [
         name: "dashboard",
         path: "/dashboard",
         element: <Home />,
-      },
-      {
-        icon: <ChartBarIcon {...icon} />,
-        name: "Transaksi",
-        path: "/recap-transaction",
-        element: <Transaction />,
       },
     ],
   },
