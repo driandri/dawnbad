@@ -1,6 +1,6 @@
 import WrapContainer from '@/widgets/layout/wrapContainer'
 import React, { useRef, useState } from 'react';
-import { motion,AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const image = [
   { img: "/img/galerry_1.jpg" },
@@ -23,23 +23,27 @@ export default function Gallery() {
 
   const previous = () => {
     if (imgData > 0 && !isLoading) {
+      imgRef.current.style.opacity = 0;
       setDirection(-1);
       setIsLoading(true)
       setTimeout(() => {
         setImgData(imgData - 1);
-        setIsLoading(false)
-      }, 500); // Ganti angka sesuai durasi animasi
+        imgRef.current.style.opacity = 1;
+        setIsLoading(false);
+      }, 2500); // Ganti angka sesuai durasi animasi
     }
   };
 
   const next = () => {
-    if (imgData < image.length - 1) {
+    if (imgData < image.length - 1 && !isLoading) {
+      imgRef.current.style.opacity = 0;
       setDirection(1);
       setIsLoading(true)
       setTimeout(() => {
         setImgData(imgData + 1);
-        setIsLoading(false)
-      }, 500); // Ganti angka sesuai durasi animasi
+        imgRef.current.style.opacity = 1;
+        setIsLoading(false);
+      }, 2500); // Ganti angka sesuai durasi animasi
     }
   };
 
@@ -51,7 +55,7 @@ export default function Gallery() {
         <div className='relative flex justify-center max-w-xl p-3'>
           <div className="flex flex-col items-center justify-center gap-5">
             <div className='flex justify-center lg:h-72 md: max-w-sm xs:w-[75%]'>
-              <AnimatePresence exitBeforeEnter={false} initial={true}>
+              {/* <AnimatePresence exitBeforeEnter={false} initial={true}>
                 <motion.img
                   key={imgData}
                   className='rounded-[8%] z-40'
@@ -67,11 +71,11 @@ export default function Gallery() {
                   src={image[imgData].img}
                   alt="gallery"
                 />
-              </AnimatePresence>
-              {/* <img ref={imgRef} className='rounded-[8%] z-40' style={{ 
-                transition: "opacity .5s ease-out",
-                WebkitTransition: "opacity .5s ease-out"
-                }} height={"80%"} width={"80%"} src={image[imgData].img} alt="" /> */}
+              </AnimatePresence> */}
+              <img ref={imgRef} className='rounded-[8%] z-40' style={{ 
+                transition: "opacity 2s linear",
+                WebkitTransition: "opacity 2s linear"
+                }} height={"80%"} width={"80%"} src={image[imgData].img} alt="" />
             </div>
             <div className='grid gap-2 max-w-sm text-center xs:w-[75%]'>
               <p className='text-md xs:text-xs'>
