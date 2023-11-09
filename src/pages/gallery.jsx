@@ -30,7 +30,7 @@ export default function Gallery() {
         setImgData(imgData - 1);
         imgRef.current.style.opacity = 1;
         setIsLoading(false);
-      }, 2500); // Ganti angka sesuai durasi animasi
+      }, 2500); 
     }
   };
 
@@ -43,7 +43,7 @@ export default function Gallery() {
         setImgData(imgData + 1);
         imgRef.current.style.opacity = 1;
         setIsLoading(false);
-      }, 2500); // Ganti angka sesuai durasi animasi
+      }, 2500);
     }
   };
 
