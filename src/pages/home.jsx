@@ -33,7 +33,7 @@ export function Home({ showLoading, hideLoading }) {
       <div className="container-logo">
         <p className="font-normal text-xs">Dawn Bad Club, c. 2023</p>
         <div className="grid items-center justify-center text-center">
-          <img className="grafity-logo" src="/img/logo_graffiti_22.svg" alt="Logo Grafity" />
+          <img className="grafity-logo 2xl:h-[640px] 2xl:w-[640px] md:max-md:h-[600px] md:max-md:w-[600px] md:max-md:mt-28" src="/img/logo_graffiti_22.svg" alt="Logo Grafity" />
           <ul className="nav-list md:hidden lg:hidden grid gap-3">
             {routes.map((data, i) => {
               return <Typography key={i} as="li" className="nav-item gap-5">
